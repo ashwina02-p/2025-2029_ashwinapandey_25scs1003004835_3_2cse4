@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hangman Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .game {
+            background: white;
+            width: 400px;
+            max-width: 90%;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        pre {
+            font-size: 16px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        #word {
+            font-size: 30px;
+            letter-spacing: 10px;
+            margin: 25px 0;
+        }
+
+        input {
+            padding: 10px;
+            width: 50px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="game">
+
+    <h1>Hangman</h1>
+
+    <pre id="hangman"></pre>
+
+    <div id="word"></div>
+
+    <p>Lives: <span id="lives">6</span></p>
+
+    <input type="text" id="guess" maxlength="1" placeholder="?">
+
+    <button onclick="makeGuess()">Guess</button>
+
+    <p id="message"></p>
+
+    <button onclick="restartGame()">Play Again</button>
+
+</div>
+
+<script>
+
+const stages = [
+`
+  +---+
+  |   |
+  O   |
+ /|\\  |
+ / \\  |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+  O   |
+ /|\\  |
+ /    |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+  O   |
+ /|\\  |
+      |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+`,
+`
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+`
+];
+
+const wordList = ["aardvark", "baboon", "camel"];
+
+let chosenWord;
+let lives;
+let correctLetters;
+let gameOver;
+
+function startGame() {
+
+    chosenWord = wordList[Math.floor(Math.random() * wordList.length)];
+
+    lives = 6;
+    correctLetters = [];
+    gameOver = false;
+
+    document.getElementById("message").textContent = "";
+
+    document.getElementById("guess").value = "";
+
+    updateScreen();
+}
+
+function updateScreen() {
+
+    let display = "";
+
+    for (let letter of chosenWord) {
+
+        if (correctLetters.includes(letter)) {
+            display += letter + " ";
+        } else {
+            display += "_ ";
+        }
+
+    }
+
+    document.getElementById("word").textContent = display;
+
+    document.getElementById("lives").textContent = lives;
+
+    document.getElementById("hangman").textContent = stages[lives];
+}
+
+function makeGuess() {
+
+    if (gameOver) {
+        return;
+    }
+
+    let input = document.getElementById("guess");
+
+    let guess = input.value.toLowerCase();
+
+    input.value = "";
+
+    if (!guess.match(/[a-z]/)) {
+        document.getElementById("message").textContent =
+            "Please enter a letter.";
+        return;
+    }
+
+    if (correctLetters.includes(guess)) {
+        document.getElementById("message").textContent =
+            "You already guessed that letter!";
+        return;
+    }
+
+    correctLetters.push(guess);
+
+    if (!chosenWord.includes(guess)) {
+        lives--;
+    }
+
+    updateScreen();
+
+    let won = true;
+
+    for (let letter of chosenWord) {
+
+        if (!correctLetters.includes(letter)) {
+            won = false;
+            break;
+        }
+
+    }
+
+    if (won) {
+
+        gameOver = true;
+
+        document.getElementById("message").textContent =
+            "🎉 You Win!";
+
+    } else if (lives === 0) {
+
+        gameOver = true;
+
+        document.getElementById("message").textContent =
+            "😢 You Lose! The word was " + chosenWord;
+
+    }
+
+}
+
+function restartGame() {
+    startGame();
+}
+
+document.getElementById("guess").addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+        makeGuess();
+    }
+
+});
+
+startGame();
+
+</script>
+
+</body>
+</html>
