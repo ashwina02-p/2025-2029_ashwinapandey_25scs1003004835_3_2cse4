@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+        }
+
+        input {
+            width: 80px;
+            padding: 8px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        #password {
+            margin-top: 20px;
+            font-weight: bold;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Password Generator</h1>
+
+    <label>Letters:</label>
+    <input type="number" id="letters" value="5" min="0">
+    <br>
+
+    <label>Symbols:</label>
+    <input type="number" id="symbols" value="2" min="0">
+    <br>
+
+    <label>Numbers:</label>
+    <input type="number" id="numbers" value="3" min="0">
+    <br>
+
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <div id="password"></div>
+
+</div>
+
+<script>
+
+function generatePassword() {
+
+    const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const symbols = "!#$%&()*+";
+    const numbers = "0123456789";
+
+    let numberOfLetters = Number(document.getElementById("letters").value);
+    let numberOfSymbols = Number(document.getElementById("symbols").value);
+    let numberOfNumbers = Number(document.getElementById("numbers").value);
+
+    let password = [];
+
+    for (let i = 0; i < numberOfLetters; i++) {
+        password.push(
+            letters[Math.floor(Math.random() * letters.length)]
+        );
+    }
+
+    for (let i = 0; i < numberOfSymbols; i++) {
+        password.push(
+            symbols[Math.floor(Math.random() * symbols.length)]
+        );
+    }
+
+    for (let i = 0; i < numberOfNumbers; i++) {
+        password.push(
+            numbers[Math.floor(Math.random() * numbers.length)]
+        );
+    }
+
+    password.sort(() => Math.random() - 0.5);
+
+    document.getElementById("password").textContent =
+        "Your password is: " + password.join("");
+}
+
+</script>
+
+</body>
+</html>
