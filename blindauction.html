@@ -32,7 +32,7 @@
         }
 
         .auction {
-            width: 650px;
+            width: 620px;
             max-width: 100%;
 
             background: #211e19;
@@ -41,18 +41,15 @@
 
             border-radius: 18px;
 
-            box-shadow:
-                0 25px 70px rgba(0, 0, 0, 0.55);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
 
             overflow: hidden;
         }
 
-        /* HEADER */
-
         .header {
             text-align: center;
 
-            padding: 35px 25px 25px;
+            padding: 38px 25px 28px;
 
             background: #252119;
 
@@ -60,8 +57,7 @@
         }
 
         .hammer {
-            font-size: 48px;
-
+            font-size: 50px;
             margin-bottom: 8px;
         }
 
@@ -83,11 +79,7 @@
             font-family: Arial, sans-serif;
 
             font-size: 14px;
-
-            letter-spacing: 0.5px;
         }
-
-        /* AUCTION ITEM */
 
         .item {
             margin: 25px;
@@ -133,8 +125,6 @@
             font-size: 13px;
         }
 
-        /* FORM */
-
         .form {
             padding: 0 35px 30px;
         }
@@ -173,8 +163,6 @@
             outline: none;
 
             font-family: Arial, sans-serif;
-
-            transition: 0.2s;
         }
 
         input:focus {
@@ -187,9 +175,7 @@
             color: #777064;
         }
 
-        /* BUTTON */
-
-        .bid-button {
+        button {
             width: 100%;
 
             padding: 15px;
@@ -197,10 +183,6 @@
             border: none;
 
             border-radius: 9px;
-
-            background: #b18b43;
-
-            color: #17130d;
 
             font-family: Arial, sans-serif;
 
@@ -213,117 +195,72 @@
             transition: 0.2s;
         }
 
+        .bid-button {
+            background: #b18b43;
+
+            color: #17130d;
+        }
+
         .bid-button:hover {
             background: #c8a55d;
 
             transform: translateY(-2px);
-
-            box-shadow:
-                0 8px 20px rgba(0, 0, 0, 0.25);
         }
 
-        .bid-button:active {
-            transform: scale(0.98);
+        .status {
+            display: none;
+
+            margin: 0 35px 30px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background: #28241d;
+
+            border: 1px solid #51483a;
+
+            border-radius: 12px;
         }
 
-        /* BID LIST */
-
-        .bids-section {
-            padding: 0 35px 30px;
+        .status.show {
+            display: block;
         }
 
-        .section-title {
-            display: flex;
+        .status-icon {
+            font-size: 30px;
 
-            justify-content: space-between;
-
-            align-items: center;
-
-            border-bottom: 1px solid #40382e;
-
-            padding-bottom: 10px;
-
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
-        .section-title span:first-child {
-            font-size: 17px;
-
-            color: #ded4c2;
-        }
-
-        .section-title span:last-child {
-            font-family: Arial, sans-serif;
-
-            font-size: 11px;
-
-            color: #8f8677;
-        }
-
-        #bidList {
-            max-height: 180px;
-
-            overflow-y: auto;
-        }
-
-        .bid {
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            padding: 12px 14px;
-
-            margin-bottom: 7px;
-
-            background: #2a261f;
-
-            border-radius: 8px;
-
-            font-family: Arial, sans-serif;
-
-            font-size: 13px;
-        }
-
-        .bid-name {
-            color: #d5ccbd;
-        }
-
-        .bid-price {
+        .status-title {
             color: #d7b76c;
 
             font-weight: bold;
+
+            font-size: 17px;
         }
 
-        .empty {
-            text-align: center;
+        .status-text {
+            margin-top: 7px;
 
-            color: #777064;
+            color: #a69c8d;
 
             font-family: Arial, sans-serif;
 
             font-size: 13px;
-
-            padding: 15px;
         }
-
-        /* WINNER */
 
         .winner {
             display: none;
 
             margin: 0 35px 35px;
 
-            padding: 25px;
+            padding: 28px;
 
             text-align: center;
 
-            background: linear-gradient(
-                145deg,
-                #30291d,
-                #241f17
-            );
+            background: linear-gradient(145deg, #30291d, #241f17);
 
             border: 1px solid #876d39;
 
@@ -337,9 +274,7 @@
         }
 
         .winner-icon {
-            font-size: 38px;
-
-            margin-bottom: 8px;
+            font-size: 40px;
         }
 
         .winner small {
@@ -359,7 +294,7 @@
 
             color: #e4c16f;
 
-            font-size: 26px;
+            font-size: 28px;
         }
 
         .winner-price {
@@ -373,25 +308,37 @@
         }
 
         .reset {
-            margin-top: 18px;
+            width: auto;
 
-            padding: 9px 18px;
+            margin-top: 20px;
+
+            padding: 10px 20px;
 
             border: 1px solid #63543b;
-
-            border-radius: 7px;
 
             background: transparent;
 
             color: #bdb19f;
-
-            cursor: pointer;
-
-            font-family: Arial, sans-serif;
         }
 
         .reset:hover {
             background: #342e25;
+        }
+
+        .end-section {
+            padding: 0 35px 35px;
+        }
+
+        .end-button {
+            background: #40382d;
+
+            color: #e5c47b;
+
+            border: 1px solid #63543b;
+        }
+
+        .end-button:hover {
+            background: #4b4032;
         }
 
         .footer {
@@ -427,7 +374,7 @@
             }
 
             .header {
-                padding: 28px 18px 22px;
+                padding: 30px 18px 22px;
             }
 
             h1 {
@@ -435,18 +382,19 @@
             }
 
             .form,
-            .bids-section {
+            .end-section {
                 padding-left: 22px;
                 padding-right: 22px;
             }
 
-            .item {
-                margin: 20px 22px;
-            }
-
+            .status,
             .winner {
                 margin-left: 22px;
                 margin-right: 22px;
+            }
+
+            .item {
+                margin: 20px 22px;
             }
         }
     </style>
@@ -485,7 +433,7 @@
     </div>
 
 
-    <div class="form">
+    <div class="form" id="form">
 
         <label for="name">
             Your Name
@@ -499,7 +447,7 @@
 
 
         <label for="bid">
-            Your Bid ($)
+            Your Secret Bid ($)
         </label>
 
         <input
@@ -514,31 +462,37 @@
             class="bid-button"
             onclick="placeBid()"
         >
-            🔨 Place Secret Bid
+            🔨 Submit Secret Bid
         </button>
 
     </div>
 
 
-    <div class="bids-section">
+    <div class="status" id="status">
 
-        <div class="section-title">
-
-            <span>Current Bidders</span>
-
-            <span id="bidCount">
-                0 BIDS
-            </span>
-
+        <div class="status-icon">
+            🔒
         </div>
 
-        <div id="bidList">
-
-            <div class="empty">
-                No bids have been placed yet.
-            </div>
-
+        <div class="status-title">
+            Bid submitted privately
         </div>
+
+        <div class="status-text">
+            Your bid has been recorded and hidden.
+        </div>
+
+    </div>
+
+
+    <div class="end-section" id="endSection">
+
+        <button
+            class="end-button"
+            onclick="finishAuction()"
+        >
+            🏆 End Auction & Reveal Winner
+        </button>
 
     </div>
 
@@ -568,7 +522,7 @@
 
 
     <div class="footer">
-        All bids are hidden until the auction ends.
+        🔒 All bids remain hidden until the auction ends.
     </div>
 
 </div>
@@ -610,59 +564,15 @@
         });
 
 
+        // Clear the inputs immediately.
         document.getElementById("name").value = "";
 
         document.getElementById("bid").value = "";
 
 
-        updateBidList();
-    }
-
-
-    function updateBidList() {
-
-        const list =
-            document.getElementById("bidList");
-
-        const count =
-            document.getElementById("bidCount");
-
-
-        count.textContent =
-            bids.length + (bids.length === 1 ? " BID" : " BIDS");
-
-
-        list.innerHTML = "";
-
-
-        if (bids.length === 0) {
-
-            list.innerHTML =
-                '<div class="empty">No bids have been placed yet.</div>';
-
-            return;
-        }
-
-
-        bids.forEach(function(bid) {
-
-            const div =
-                document.createElement("div");
-
-            div.className = "bid";
-
-            div.innerHTML = `
-                <span class="bid-name">
-                    ${escapeHTML(bid.name)}
-                </span>
-
-                <span class="bid-price">
-                    $${bid.amount.toLocaleString()}
-                </span>
-            `;
-
-            list.appendChild(div);
-        });
+        // Do NOT display the bidder or bid amount.
+        document.getElementById("status")
+            .classList.add("show");
     }
 
 
@@ -670,7 +580,7 @@
 
         if (bids.length === 0) {
 
-            alert("Place at least one bid first.");
+            alert("No bids have been submitted yet.");
 
             return;
         }
@@ -688,20 +598,29 @@
         }
 
 
-        document.getElementById("winnerName").textContent =
-            winner.name;
+        document.getElementById("winnerName")
+            .textContent = winner.name;
 
-        document.getElementById("winnerPrice").textContent =
+
+        document.getElementById("winnerPrice")
+            .textContent =
             "$" + winner.amount.toLocaleString();
 
 
-        document.getElementById("winner").classList.add("show");
+        document.getElementById("winner")
+            .classList.add("show");
 
-        document.querySelector(".bids-section").style.display =
-            "none";
 
-        document.querySelector(".form").style.display =
-            "none";
+        document.getElementById("form")
+            .style.display = "none";
+
+
+        document.getElementById("status")
+            .classList.remove("show");
+
+
+        document.getElementById("endSection")
+            .style.display = "none";
     }
 
 
@@ -714,49 +633,21 @@
             .classList.remove("show");
 
 
-        document.querySelector(".bids-section")
+        document.getElementById("form")
             .style.display = "block";
 
 
-        document.querySelector(".form")
+        document.getElementById("endSection")
             .style.display = "block";
 
 
-        updateBidList();
+        document.getElementById("status")
+            .classList.remove("show");
     }
 
-
-    function escapeHTML(text) {
-
-        const div =
-            document.createElement("div");
-
-        div.textContent = text;
-
-        return div.innerHTML;
-    }
-
-
-    // Finish the auction when the user presses
-    // Enter after adding bids.
-
-    document.addEventListener("keydown", function(event) {
-
-        if (event.key === "Enter") {
-
-            const active =
-                document.activeElement;
-
-            if (
-                active.id === "name" ||
-                active.id === "bid"
-            ) {
-                placeBid();
-            }
-        }
-    });
 
 </script>
 
 </body>
+
 </html>
