@@ -7,7 +7,7 @@
 [📥 View Internship PPT](./ashwinapandey_internship_PPT.pptx.pdf)
 
 ### 📑 Internship Report
-[📥 View Internship Report](./ashwinapandey_internship_report.pdf)
+[📥 View Internship Report](./internship_ashwinapandey_report.pdf)
 
 ### 🏆 Internship Certificate
 [📥 View Internship Certificate](./ashwinapandey_internship_certificate.pdf)
