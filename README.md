@@ -1,4 +1,4 @@
-# 2025-2029_ashwinapandey_25scs1003004835_3_2cse4
+# Ashwina Pandey
 ---
 
 ## 📂 Internship Documents
