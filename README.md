@@ -1,4 +1,17 @@
 # 2025-2029_ashwinapandey_25scs1003004835_3_2cse4
+---
+
+## 📂 Internship Documents
+
+### 📊 Internship PPT
+[📥 View Internship PPT](./ashwinapandey_internship_PPT.pptx.pdf)
+
+### 📑 Internship Report
+[📥 View Internship Report](./ashwinapandey_internship_report.pdf)
+
+### 🏆 Internship Certificate
+[📥 View Internship Certificate](./ashwinapandey_internship_certificate.pdf)
+
 
 ## 🔐 Password Generator
 
