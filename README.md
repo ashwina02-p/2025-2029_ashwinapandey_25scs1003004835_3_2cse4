@@ -12,6 +12,7 @@
 ### 🏆 Internship Certificate
 [📥 View Internship Certificate](./ashwinapandey_internship_certificate.pdf)
 
+---
 
 ## 🔐 Password Generator
 
