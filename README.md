@@ -1,16 +1,16 @@
 # Ashwina Pandey
 ---
 
-## 📂 Internship Documents
+## 📄 Course Documentation
 
-### 📊 Internship PPT
-[📥 View Internship PPT](./ashwinapandey_internship_PPT.pptx.pdf)
+### 📜 Course Certificate
+[View Course Certificate](./ashwinapandey_course_certificate.pdf)
 
-### 📑 Internship Report
-[📥 View Internship Report](./internship_ashwinapandey_report.pdf)
+### 📊 Project Presentation
+[View Project PPT](./ashwinapandey_course_PPT.pptx)
 
-### 🏆 Internship Certificate
-[📥 View Internship Certificate](./ashwinapandey_internship_certificate.pdf)
+### 📝 Project Report
+[View Project Report](./ashwinapandey_course_report.pdf)
 
 ---
 ## 🎮 Games
