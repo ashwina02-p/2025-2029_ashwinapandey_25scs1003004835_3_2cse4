@@ -1,6 +1,18 @@
 # Ashwina Pandey
----
 
+---
+## 📄 Python Internship Documentation
+
+### 📜 Internship Certificate
+[View Internship Certificate](./ashwina_internship_certificate.pdf)
+
+### 📝 Internship Report
+[View Internship Report](./ashwina_python_internship_report.pdf)
+
+### 📊 Internship Presentation
+[View Internship Presentation](./AshwinaPandey_Python_Internship_Presentation.pptx.pdf)
+
+---
 ## 📄 Course Documentation
 
 ### 📜 Course Certificate
